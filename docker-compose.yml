@@ -1,0 +1,13 @@
+services:
+  cv-website:
+    image: eya1405/cv:v1
+    container_name: eya-cv-container
+    ports:
+      - "8005:80"
+    restart: unless-stopped
+    networks:
+      - cv-network
+
+networks:
+  cv-network:
+    driver: bridge
